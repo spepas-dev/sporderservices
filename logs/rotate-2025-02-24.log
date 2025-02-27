@@ -1,0 +1,31 @@
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"info","message":"Request created successfully"}
+{"content_length":"355","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":8724.685,"status":200,"url":"/sporderservices/api/v1/request/add"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"17974","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":7196.557,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"17974","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":7162.137,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"10161","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":7005.575,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"10161","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":6001.445,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"error","message":"jwt expired"}
+{"content_length":"36","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":12.114,"status":500,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"10161","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":7031.696,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"10161","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":6099.784,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Request created successfully"}
+{"content_length":"355","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":8821.319,"status":200,"url":"/sporderservices/api/v1/request/add"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"11425","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":5895.632,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"11425","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":6019.692,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"11425","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":6096.151,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"11425","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":6006.437,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"251","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":5538.172,"status":200,"url":"/sporderservices/api/v1/cart/add-bid"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"11425","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":6089.099,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
