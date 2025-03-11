@@ -278,6 +278,80 @@ ussd.makeHttpRequest = async (method, url, data = null) => {
 };
 
 
+ussd.getServiceObj = async (serviceType) => {
+    
+  try {
+    var loginUrl = process.env.DB_BASE_URL +"service-charge/details-by-charge-type/"+serviceType; 
+ 
+    let newJob = await ussd.makeHttpRequest("GET",loginUrl);
+
+
+    if(!newJob){
+      return null;
+    }
+
+
+    if(newJob.status != RESPONSE_CODES.SUCCESS){
+      return null;
+   }
+
+      return newJob.data;
+    } catch (error) {
+      console.error(`Error in:`, error.message);
+      throw error; // Propagate error for further handling
+    }
+
+
+};
+
+
+
+
+ussd.calculateCharge = async (serviceObj, amountHolder) => {
+  if(!serviceObj)
+    {
+      return null;
+    }
+  var amount = 0;
+  if (serviceObj.flatAmount != 0)
+    {
+      amount = serviceObj.flatAmount;
+    } else if(serviceObj.percentage != 0)
+      {
+        //there is a percentage calculate charge using percentage
+        var baseAmount = amountHolder[serviceObj.percentage_base];
+
+        if(!baseAmount)
+          {
+            let newServCharge = await ussd.getServiceObj(serviceObj.percentage_base);
+            baseAmount = await ussd.calculateCharge(newServCharge,amountHolder) 
+          }
+
+          if(!baseAmount){
+            return null;
+          }
+         
+          let percDecimal = serviceObj.percentage / 100;
+
+          amount = baseAmount * percDecimal;
+      }
+
+      if(serviceObj.minAmnt > 0)
+        {
+          amount = Math.max(amount, serviceObj.minAmnt)
+        }
+
+        if(serviceObj.maxAmount > 0)
+          {
+            amount =  Math.min(amount, serviceObj.maxAmount);
+          }
+
+          return parseFloat(amount.toFixed(2));
+}
+
+
+
+
 
 
 ussd.sendResponse = (res, code,message, data) => {
@@ -302,6 +376,165 @@ sessionModel.addLog(log);
    data?.status == RESPONSE_CODES.FAILED ? logger.error(message) : logger.info(message)
    res.status(code).json(data)
 };
+
+
+
+
+
+
+
+
+ussd.generateRandomString = (length) => {
+
+  return crypto.randomBytes(length).toString("hex").slice(0, length);
+};
+
+
+
+
+ussd.generateWalletNumber = (prefix,id) => {
+  return `${prefix}${String(id).padStart(6, "0")}`;
+};
+
+
+
+
+
+
+ussd.UserCharges = async (user_id) => {
+    
+  
+  var loginUrl = process.env.DB_BASE_URL +"cart/full-user-carts/"+user_id; 
+ 
+  let newJob = await ussd.makeHttpRequest("GET",loginUrl);
+
+
+  if(!newJob)
+    {
+        var resp = {
+            status : RESPONSE_CODES.FAILED,
+            message : "Failed to connect to database services"
+        };
+        return resp;
+    }
+
+    if(newJob.status != RESPONSE_CODES.SUCCESS){
+        return newJob;
+     }
+
+     let carts = newJob.data;
+
+     //calculate total amount in cart
+     const totalSum = carts.reduce((sum, item) => sum + (item.bid.totalPrice || 0), 0);
+     //calculate total items in cart
+     const totalCount = carts.reduce((sum, item) => sum + (item.bid.orderRequest.quantity || 0), 0);
+
+
+     var amountHolder = {
+        MAIN_AMOUNT: totalSum
+     };
+
+     //calculate service charge
+     
+     let serviceChargeObj = await ussd.getServiceObj("SERVICE_CHARGE");
+     if(!serviceChargeObj)
+        {
+            var resp = {
+                status : RESPONSE_CODES.FAILED,
+                message : "Failed to retrieve service charge details"
+            };
+            return resp;
+        }
+
+        let serviceCharge  = await ussd.calculateCharge(serviceChargeObj,amountHolder);
+
+        if(!serviceCharge)
+            {
+                var resp = {
+                    status : RESPONSE_CODES.FAILED,
+                    message : "Failed to calculate service charge"
+                };
+                return resp;
+            }
+
+            amountHolder[serviceChargeObj.charge_type] = serviceCharge
+
+
+     //calculate delivery charge
+     let deliveryChargeObj = await ussd.getServiceObj("DELIVERY_CHARGE");
+     if(!deliveryChargeObj)
+        {
+            var resp = {
+                status : RESPONSE_CODES.FAILED,
+                message : "Failed to retrieve delivery charge details"
+            };
+            return resp;
+        }
+
+        let deliverCharge  = await ussd.calculateCharge(deliveryChargeObj,amountHolder);
+
+
+        if(!deliverCharge)
+            {
+                var resp = {
+                    status : RESPONSE_CODES.FAILED,
+                    message : "Failed to calculate delivery charge"
+                };
+                return resp;
+            }
+
+            amountHolder[deliveryChargeObj.charge_type] = deliverCharge
+
+
+     //calculate tax
+     let taxChargeObj = await ussd.getServiceObj("TAX");
+     if(!taxChargeObj)
+        {
+            var resp = {
+                status : RESPONSE_CODES.FAILED,
+                message : "Failed to retrieve tax details"
+            };
+            return resp;
+        }
+
+        let tax  = await ussd.calculateCharge(taxChargeObj,amountHolder);
+
+
+        if(!tax)
+            {
+                var resp = {
+                    status : RESPONSE_CODES.FAILED,
+                    message : "Failed to calculate tax"
+                };
+                return resp;
+            }
+
+            amountHolder[taxChargeObj.charge_type] = tax
+
+
+
+            amountHolder["TOTAL_ITEMS"] = totalCount;
+
+            amountHolder["CARTS"] = carts;
+
+
+
+   var resp = {
+    status : RESPONSE_CODES.SUCCESS,
+    message : "Successful",
+    data: amountHolder
+};
+
+return resp;
+};
+
+
+
+
+
+
+
+
 
 
 

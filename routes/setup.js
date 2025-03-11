@@ -58,7 +58,34 @@ const {
  
 
 
+
+const {
+   ADD_SERVICE_CHARGE,
+   CALCULATE_CHARGES
+} = require("../controllers/ServiceChargeController");
+
+
+
+
+const {
+   ADD_WALLET,
+   WALLET_DETAILS_BY_WALLET_ID,
+   WALLET_DETAILS_BY_WALLET_NUMBER,
+   WALLET_DETAILS_BY_USER_ID,
+   SYSTEM_WALLET
+} = require("../controllers/WalletController");
+
+
+
  
+const {
+   ADD_ADDRESS,
+   ADDRESS_DETAILS,
+   USER_ADDRESSES
+} = require("../controllers/AddressController");
+
+
+
 
  
 
@@ -99,5 +126,24 @@ router.route("/cart/add-bid").post(NoneUserCheck,VALIDATE_TOKEN,ADD_BID_TO_CART)
 router.route("/cart/user-carts/:user_id?").get(NoneUserCheck,VALIDATE_TOKEN,USER_CARTS);
 router.route("/cart/remove-bid").post(NoneUserCheck,VALIDATE_TOKEN,REMOVE_BID_FROM_CART);
 
+
+//Service charge
+router.route("/service-charge/add").post(NoneUserCheck,VALIDATE_TOKEN,ADD_SERVICE_CHARGE);
+router.route("/service-charge/user-charges/:user_id?").get(NoneUserCheck,VALIDATE_TOKEN,CALCULATE_CHARGES);
+
+
+//Wallet services
+router.route("/wallet/add").post(NoneUserCheck,VALIDATE_TOKEN,ADD_WALLET);
+router.route("/wallet/details-by-wallet-id/:walletID").get(NoneUserCheck,VALIDATE_TOKEN,WALLET_DETAILS_BY_WALLET_ID);
+router.route("/wallet/details-by-wallet-number/:WalletNumber").get(NoneUserCheck,VALIDATE_TOKEN,WALLET_DETAILS_BY_WALLET_NUMBER);
+router.route("/wallet/details-by-user-id/:user_id?").get(NoneUserCheck,VALIDATE_TOKEN,WALLET_DETAILS_BY_USER_ID);
+router.route("/wallet/system-wallets").get(NoneUserCheck,VALIDATE_TOKEN,SYSTEM_WALLET);
+
+
+
+//address services
+router.route("/address/add").post(NoneUserCheck,VALIDATE_TOKEN,ADD_ADDRESS);
+router.route("/address/details-by-id/:address_id").get(NoneUserCheck,VALIDATE_TOKEN,ADDRESS_DETAILS);
+router.route("/address/user-addresses/:user_id?").get(NoneUserCheck,VALIDATE_TOKEN,USER_ADDRESSES);
 
 module.exports = router;

@@ -1,0 +1,4 @@
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"5022","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":6262.135,"status":200,"url":"/sporderservices/api/v1/bidding/request-biddings/49f8ebe6-a28a-4d03-8f70-10a12314ea02"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"17462","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":6125.728,"status":200,"url":"/sporderservices/api/v1/bidding/seller-active-biddings/6373d98b-5685-4f50-840f-8f3f201e3558"}
