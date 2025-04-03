@@ -1,2 +1,0 @@
-{"label":"Spare Spart api logs","level":"info","message":"Successful"}
-{"content_length":"5506","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":6847.744,"status":200,"url":"/sporderservices/api/v1/cart/user-carts"}

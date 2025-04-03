@@ -104,7 +104,7 @@ exports.CALCULATE_CHARGES = asynHandler(async (req, res, next) => {
   
    
     let {user} = req;
-    let {user_id} = req.params;
+    let {user_id, aggeagate} = req.params;
 
     if(!user_id)
         {
@@ -113,7 +113,7 @@ exports.CALCULATE_CHARGES = asynHandler(async (req, res, next) => {
 
 
 
-  let resp = await UtilityHelper.UserCharges(user_id);
+  let resp = await UtilityHelper.UserCharges(user_id,aggeagate);
 
 
 

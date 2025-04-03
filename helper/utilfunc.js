@@ -401,7 +401,7 @@ ussd.generateWalletNumber = (prefix,id) => {
 
 
 
-ussd.UserCharges = async (user_id) => {
+ussd.UserCharges = async (user_id, aggeagate) => {
     
   
   var loginUrl = process.env.DB_BASE_URL +"cart/full-user-carts/"+user_id; 
@@ -483,6 +483,12 @@ ussd.UserCharges = async (user_id) => {
                 return resp;
             }
 
+
+            if(Number(aggeagate) != 1)
+              {
+                //calculate delivery charge per bid
+                deliverCharge = carts.length * deliverCharge;
+              }
             amountHolder[deliveryChargeObj.charge_type] = deliverCharge
 
 

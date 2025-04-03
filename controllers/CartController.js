@@ -218,3 +218,77 @@ exports.REMOVE_BID_FROM_CART = asynHandler(async (req, res, next) => {
    return UtilityHelper.sendResponse(res, 200, resp.message, resp);
 
 })
+
+
+
+
+
+exports.CHECK_OUT_FROM_CART = asynHandler(async (req, res, next) => {
+
+  
+   
+    let {user, body} = req;
+
+
+
+    if(!body.User_ID)
+        {
+            body.User_ID = user.User_ID;
+        }
+ 
+
+
+
+
+    if(!body.address_id){
+        //new address details added. save address for future transaction
+
+        var locObj = {
+            type: "Point",
+            coordinates: [body.address.longitude, body.address.latitude]
+            }
+
+ let addressReqBody = {
+    User_ID: body.User_ID,
+    title: body.address.title,
+    location: locObj,
+    addressDetails: body.address.addressDetails
+ }
+
+ var addressURL = process.env.DB_BASE_URL +"address/add"; 
+
+ let newAddressResponse = await UtilityHelper.makeHttpRequest("POST",addressURL, addressReqBody);
+
+
+
+ if(!newAddressResponse)
+    {
+        var resp = {
+            status : RESPONSE_CODES.FAILED,
+            message : "Failed to connect to address database services"
+        };
+        return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+    }
+    
+
+
+    if(newAddressResponse.status != RESPONSE_CODES.SUCCESS){
+        return UtilityHelper.sendResponse(res, 200, newAddressResponse.message, newAddressResponse);
+     }
+
+     body.address_id = newAddressResponse.data.address_id;
+    }
+
+
+
+
+
+
+
+    
+
+
+
+
+
+})

@@ -129,7 +129,7 @@ router.route("/cart/remove-bid").post(NoneUserCheck,VALIDATE_TOKEN,REMOVE_BID_FR
 
 //Service charge
 router.route("/service-charge/add").post(NoneUserCheck,VALIDATE_TOKEN,ADD_SERVICE_CHARGE);
-router.route("/service-charge/user-charges/:user_id?").get(NoneUserCheck,VALIDATE_TOKEN,CALCULATE_CHARGES);
+router.route("/service-charge/user-charges/:aggeagate/:user_id?").get(NoneUserCheck,VALIDATE_TOKEN,CALCULATE_CHARGES);
 
 
 //Wallet services

@@ -60,6 +60,16 @@ let TASK_STATUS = {
     DECLINED: 10
 }
 
+
+let INVOICE_STATUS = {
+    PENDING : 0,
+    WARE_HOUSE : 2,
+    READY_TO_BE_SHIPPED: 3,
+    SHIPPED : 4,
+    DELIVERED : 1,
+    CANCELLED : 100
+}
+
 let REFERRAL_TYPE = {
     HOSPITAL : "HOSPITAL",
     LAB : "LAB",
@@ -75,7 +85,8 @@ module.exports = {
     RESPONSE_CODES,
     REGISTRATION_STATUS,
     TASK_STATUS,
-    REFERRAL_TYPE
+    REFERRAL_TYPE,
+    INVOICE_STATUS
 }
 
 
