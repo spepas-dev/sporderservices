@@ -50,7 +50,8 @@ const {
  const {
    ADD_BID_TO_CART,
    USER_CARTS,
-   REMOVE_BID_FROM_CART
+   REMOVE_BID_FROM_CART,
+   CHECK_OUT_FROM_CART
 } = require("../controllers/CartController");
 
 
@@ -83,6 +84,17 @@ const {
    ADDRESS_DETAILS,
    USER_ADDRESSES
 } = require("../controllers/AddressController");
+
+
+ 
+const {
+   GOPA_INVOICE_TO_ACCEPT,
+   ACCEPT_INVOICE,
+   GOPA_ACCEPTED_INVOICE,
+   INVOICE_DETAILS,
+   INVOICE__ITEM_DETAILS
+} = require("../controllers/InvoiceController");
+
 
 
 
@@ -123,6 +135,7 @@ router.route("/bidding/upload-image").post(NoneUserCheck,VALIDATE_TOKEN,upload.s
 
 //cart
 router.route("/cart/add-bid").post(NoneUserCheck,VALIDATE_TOKEN,ADD_BID_TO_CART);
+router.route("/cart/check-out").post(NoneUserCheck,VALIDATE_TOKEN,CHECK_OUT_FROM_CART);
 router.route("/cart/user-carts/:user_id?").get(NoneUserCheck,VALIDATE_TOKEN,USER_CARTS);
 router.route("/cart/remove-bid").post(NoneUserCheck,VALIDATE_TOKEN,REMOVE_BID_FROM_CART);
 
@@ -145,5 +158,18 @@ router.route("/wallet/system-wallets").get(NoneUserCheck,VALIDATE_TOKEN,SYSTEM_W
 router.route("/address/add").post(NoneUserCheck,VALIDATE_TOKEN,ADD_ADDRESS);
 router.route("/address/details-by-id/:address_id").get(NoneUserCheck,VALIDATE_TOKEN,ADDRESS_DETAILS);
 router.route("/address/user-addresses/:user_id?").get(NoneUserCheck,VALIDATE_TOKEN,USER_ADDRESSES);
+
+
+
+
+//Invoice
+router.route("/invoice/for-gopa-to-accept").get(NoneUserCheck,VALIDATE_TOKEN,GOPA_INVOICE_TO_ACCEPT);
+router.route("/invoice/accept-invoice").post(NoneUserCheck,VALIDATE_TOKEN,ACCEPT_INVOICE);
+router.route("/invoice/gopa-accepted-invoice/:gopa_user_id?").get(NoneUserCheck,VALIDATE_TOKEN,GOPA_ACCEPTED_INVOICE);
+router.route("/invoice/details/:invoice_id").get(NoneUserCheck,VALIDATE_TOKEN,INVOICE_DETAILS);
+router.route("/invoice/item-details/:item_id").get(NoneUserCheck,VALIDATE_TOKEN,INVOICE__ITEM_DETAILS);
+
+
+
 
 module.exports = router;

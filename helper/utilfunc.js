@@ -307,6 +307,37 @@ ussd.getServiceObj = async (serviceType) => {
 
 
 
+
+
+
+ussd.walletDetailsByAccount = async (accountNumber) => {
+    
+  try {
+    var loginUrl = process.env.DB_BASE_URL +"wallet/details-by-wallet-number/"+accountNumber; 
+ 
+    let newJob = await ussd.makeHttpRequest("GET",loginUrl);
+
+
+    if(!newJob){
+      return null;
+    }
+
+
+    if(newJob.status != RESPONSE_CODES.SUCCESS){
+      return null;
+   }
+
+      return newJob.data;
+    } catch (error) {
+      console.error(`Error in:`, error.message);
+      throw error; // Propagate error for further handling
+    }
+
+
+};
+
+
+
 ussd.calculateCharge = async (serviceObj, amountHolder) => {
   if(!serviceObj)
     {

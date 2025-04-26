@@ -1,6 +1,8 @@
 const asynHandler = require("../middleware/async");
 const UtilityHelper = require("../helper/utilfunc");
-const { REGISTRATION_STATUS, RESPONSE_CODES } = require("../helper/vars");
+const PaymentHelper = require("../helper/paymentHelper");
+const { REGISTRATION_STATUS, RESPONSE_CODES, INVOICE_STATUS } = require("../helper/vars");
+const { v4: uuidv4 } = require('uuid');
 
 
 
@@ -281,14 +283,149 @@ exports.CHECK_OUT_FROM_CART = asynHandler(async (req, res, next) => {
 
 
 
+    //get user invoice and its cart
+
+
+    let respCharge = await UtilityHelper.UserCharges(body.User_ID,body.aggeagate);
 
 
 
+    if(respCharge.status != RESPONSE_CODES.SUCCESS){
 
+        return UtilityHelper.sendResponse(res, 200, respCharge.message, respCharge);
+    }
+   
+  let chargeDetails = respCharge.data;
+
+
+
+  //create incoice and invoice items and save it into the database
+    let invoice = {
+        total_items: chargeDetails.TOTAL_ITEMS,
+        total_amount: chargeDetails.MAIN_AMOUNT +  chargeDetails.SERVICE_CHARGE + chargeDetails.DELIVERY_CHARGE + chargeDetails.TAX,
+        amount: chargeDetails.MAIN_AMOUNT ,
+        service_charge: chargeDetails.DELIVERY_CHARGE,
+        delivery_charge:  chargeDetails.DELIVERY_CHARGE,
+        tax:  chargeDetails.TAX,
+        paymentResponseRefrence: "",
+        paymentResponse: {},
+        paymentMode: body.paymentDetails.paymentMode,
+        paymentNumber:  body.paymentDetails.walletNumber,
+        paymentProvider: body.paymentDetails.network,
+        statusMessage: "PENDING",
+        aggregate: body.aggeagate,
+        qr_value: uuidv4(),
+        User_ID: body.User_ID,
+        address_id:  body.address_id 
+    }
+
+
+    const invoice_items = chargeDetails.CARTS.map(cart => ({
+        
+        total_items: cart.bid.orderRequest.quantity,
+        total_amount: cart.bid.totalPrice,
+        statusMessage: "PENDING",
+        qr_value: uuidv4(),
+        user_id: body.User_ID,
+        aggregate: body.aggeagate,
+        cart_ID: cart.cart_ID
+    }));
+
+
+
+     const invoice_body = {
+        "invoice": invoice,
+        "invoiceItems":invoice_items
+     }
+
+
+
+     var invoiceUrl = process.env.DB_BASE_URL +"invoice/add-with-items"; 
+
+     let invoiceResponse = await UtilityHelper.makeHttpRequest("POST",invoiceUrl, invoice_body);
+    
+    
+    
+     if(!invoiceResponse)
+        {
+            var resp = {
+                status : RESPONSE_CODES.FAILED,
+                message : "Failed to connect to invoice database services"
+            };
+            return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+        }
+        
     
 
+        if(invoiceResponse.status != RESPONSE_CODES.SUCCESS){
+
+            return UtilityHelper.sendResponse(res, 200, resp.message, invoiceResponse);
+        }
+       
+
+    const savedItems = invoiceResponse.data.items;
+    var savedInvoice = invoiceResponse.data;
+    delete savedInvoice.items;
+    
+
+     //submit payment request
+
+     let {status, response} = await PaymentHelper.initiatePaymentRequest(savedInvoice);
+
+     savedInvoice.paymentResponseRefrence = response.paymentReference;
+     savedInvoice.paymentResponse = response;
+     savedInvoice.paymentStatus = status == true ? 1 : INVOICE_STATUS.FAILED 
+     savedInvoice.status = status == true ? 0 : INVOICE_STATUS.FAILED 
+     savedInvoice.statusMessage = status == true ? "PENDING": "FAILED"
+
+     
+
+     //update invoice with payment details
 
 
 
+     var invoiceUpdateURL = process.env.DB_BASE_URL +"invoice/update"; 
 
+     let invoiceUpdateResponse = await UtilityHelper.makeHttpRequest("POST",invoiceUpdateURL, savedInvoice);
+    
+    
+    
+     if(!invoiceUpdateResponse)
+        {
+            var resp = {
+                status : RESPONSE_CODES.FAILED,
+                message : "Failed to connect to invoice update database services"
+            };
+            return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+        }
+
+        if(invoiceUpdateResponse.status != RESPONSE_CODES.SUCCESS){
+
+            return UtilityHelper.sendResponse(res, 200, invoiceUpdateResponse.message, invoiceUpdateResponse);
+        }
+
+
+        //check if payment failed return failed response to use
+        if(status == false){
+            //payment failed
+            var resp = {
+                status : RESPONSE_CODES.FAILED,
+                message :response.message
+            };
+            return UtilityHelper.sendResponse(res, 200, response.message, resp);
+        }
+
+
+        //call background services to distribute transactions and update order request
+        PaymentHelper.distributePaymentRevenue(savedInvoice,chargeDetails)
+
+
+        var resp = {
+            status : RESPONSE_CODES.SUCCESS,
+            message : "Successful"
+        };
+        
+        
+           return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+        
 })

@@ -1,5 +1,0 @@
-{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
-{"label":"Spare Spart api logs","level":"info","message":"Request created successfully"}
-{"content_length":"356","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":8500.769,"status":200,"url":"/sporderservices/api/v1/request/add"}
-{"label":"Spare Spart api logs","level":"info","message":"Successful"}
-{"content_length":"342","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":3168.996,"status":200,"url":"/sporderservices/api/v1/request/gopa-sellers-for-bidding/5c158842-425c-4b3d-bca9-c4efb15622c0/dd5095bd-e810-4fd6-bf95-64f65d3a2e64"}

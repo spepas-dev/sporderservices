@@ -1,0 +1,325 @@
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"8551","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":13911.869,"status":200,"url":"/sporderservices/api/v1/service-charge/user-charges/1"}
+{"label":"Spare Spart api logs","level":"error","message":"jwt malformed"}
+{"content_length":"38","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":9.527,"status":500,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"36210","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":6616.28,"status":200,"url":"/sporderservices/api/v1/request/user-active-requests"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"252","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":5834.886,"status":200,"url":"/sporderservices/api/v1/cart/add-bid"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"13391","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":12258.727,"status":200,"url":"/sporderservices/api/v1/service-charge/user-charges/1"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"error","message":"INVOICE_STATUS is not defined"}
+{"content_length":"54","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":17606.079,"status":500,"url":"/sporderservices/api/v1/cart/check-out"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"error","message":"Request failed with status code 500"}
+{"content_length":"60","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":14254.4,"status":500,"url":"/sporderservices/api/v1/cart/check-out"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"error","message":"Request failed with status code 500"}
+{"content_length":"60","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":17867.981,"status":500,"url":"/sporderservices/api/v1/cart/check-out"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"error","message":"Payment request successful"}
+{"content_length":"51","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":19181.444,"status":200,"url":"/sporderservices/api/v1/cart/check-out"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"35","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":18106.251,"status":200,"url":"/sporderservices/api/v1/cart/check-out"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"error","message":"Failed to calculate service charge"}
+{"content_length":"59","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":8668.017,"status":200,"url":"/sporderservices/api/v1/service-charge/user-charges/1"}
+{"label":"Spare Spart api logs","level":"error","message":"jwt expired"}
+{"content_length":"36","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":11.637,"status":500,"url":"/sporderservices/api/v1/cart/user-carts"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"45","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":4341.488,"status":200,"url":"/sporderservices/api/v1/cart/user-carts"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"15022","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":9957.712,"status":200,"url":"/sporderservices/api/v1/invoice/for-gopa-to-accept"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"error","message":"Not found"}
+{"content_length":"34","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":2.674,"status":404,"url":"/sporderservices/api/v1/invoice/accept-invoice"}
+{"label":"Spare Spart api logs","level":"error","message":"Not found"}
+{"content_length":"34","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":4.082,"status":404,"url":"/sporderservices/api/v1/invoice/accept-invoice"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"875","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"POST","response_time":5701.084,"status":200,"url":"/sporderservices/api/v1/invoice/accept-invoice"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"error","message":"usegopa_user_idr_id is not defined"}
+{"content_length":"59","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":3428.554,"status":500,"url":"/sporderservices/api/v1/invoice/gopa-accepted-invoice"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"error","message":"user_id is not defined"}
+{"content_length":"47","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":1700.331,"status":500,"url":"/sporderservices/api/v1/invoice/gopa-accepted-invoice"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"15433","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":9065.005,"status":200,"url":"/sporderservices/api/v1/invoice/gopa-accepted-invoice"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"15433","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":9804.72,"status":200,"url":"/sporderservices/api/v1/invoice/gopa-accepted-invoice/b4181aa4-d17d-4577-82e9-8913c94827a3"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"15431","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":8777.191,"status":200,"url":"/sporderservices/api/v1/invoice/details/ac3931fe-c323-4ffa-90a3-3a358231fa6d"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"15431","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":8006.211,"status":200,"url":"/sporderservices/api/v1/invoice/details/ac3931fe-c323-4ffa-90a3-3a358231fa6d"}
+{"label":"Spare Spart api logs","level":"error","message":"Invalid invoice ID"}
+{"content_length":"43","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":3009.81,"status":200,"url":"/sporderservices/api/v1/invoice/item-details/6f6a51f4-eb42-4505-8fa9-59e1a37653e0"}
+{"label":"Spare Spart api logs","level":"info","message":"Successful"}
+{"content_length":"5799","label":"Spare Spart api logs","level":"http","message":"incoming-api-request","method":"GET","response_time":7290.11,"status":200,"url":"/sporderservices/api/v1/invoice/item-details/91b4d83f-1303-4c86-a186-dd9f0775d37e"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
+{"label":"Spare Spart api logs","level":"debug","message":"Spare Order Database Service: Running in development mode and listening on port http://:9011"}
