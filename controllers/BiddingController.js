@@ -3,6 +3,7 @@ const UtilityHelper = require("../helper/utilfunc");
 const { REGISTRATION_STATUS, RESPONSE_CODES } = require("../helper/vars");
 const cloudinary = require("../config/cloudinary");
 const fs = require("fs");
+const { parseISO } = require('date-fns');
 
 exports.REQUEST_BIDDINGS = asynHandler(async (req, res, next) => {
   let { user } = req;
@@ -257,6 +258,15 @@ exports.GOPA_BIDDING_HISTORY = asynHandler(async (req, res, next) => {
 exports.ACCEPT_BID = asynHandler(async (req, res, next) => {
   let { user, body } = req;
 
+  if(!body.expectedDeliveryDate)
+    {
+      var resp = {
+        status: RESPONSE_CODES.FAILED,
+        message: "Invalid expected delivery date",
+      };
+      return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+    }
+
   var loginUrl = process.env.DB_BASE_URL + "bidding/details/" + body.bidding_ID;
 
   let newJob = await UtilityHelper.makeHttpRequest("GET", loginUrl);
@@ -282,7 +292,8 @@ exports.ACCEPT_BID = asynHandler(async (req, res, next) => {
   bidDetails.totalPrice = body.totalPrice;
   bidDetails.discount = body.discount;
   bidDetails.status = 1;
-
+  
+  bidDetails.expectedDeliveryDate = parseISO(`${body.expectedDeliveryDate}T00:00:00Z`);
   var biddingUrl = process.env.DB_BASE_URL + "bidding/update";
 
   let biddingResponse = await UtilityHelper.makeHttpRequest(

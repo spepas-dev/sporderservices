@@ -429,6 +429,34 @@ ussd.generateWalletNumber = (prefix,id) => {
 
 
 
+ussd.generateAggregateCharge = (data) => {
+  const groupedData = data.reduce((acc, item) => {
+    const deliveryDate = item.bid.expectedDeliveryDate;
+    
+    if (!acc[deliveryDate]) {
+        acc[deliveryDate] = {
+            expectedDeliveryDate: deliveryDate,
+            totalPrice: 0,
+            count: 0,
+            items: []
+        };
+    }
+    
+    acc[deliveryDate].totalPrice += item.bid.totalPrice;
+    acc[deliveryDate].count += 1;
+    acc[deliveryDate].items.push(item);
+    
+    return acc;
+}, {});
+
+// Convert to array if needed
+const result = Object.values(groupedData);
+console.log(result);
+return result;
+};
+
+
+//
 
 
 
@@ -514,13 +542,36 @@ ussd.UserCharges = async (user_id, aggeagate) => {
                 return resp;
             }
 
+             var chargeBreakDown = [];
 
             if(Number(aggeagate) != 1)
               {
                 //calculate delivery charge per bid
+                chargeBreakDown = carts.map(item => ({
+                  deliveryCharge : deliverCharge,
+                  totalItems : 1,
+                  expectedDeliveryDate: item.bid.expectedDeliveryDate
+              }));
+
+
                 deliverCharge = carts.length * deliverCharge;
+               
+              }else{
+                //do a new calculations for aggregate charge
+                let aggregatedCharges = ussd.generateAggregateCharge(carts)
+
+                chargeBreakDown = aggregatedCharges.map(item => ({
+                  deliveryCharge : deliverCharge,
+                  totalItems : item.items.length,
+                  expectedDeliveryDate: item.expectedDeliveryDate
+              }));
+                
+              deliverCharge = chargeBreakDown.length * deliverCharge;
+
               }
             amountHolder[deliveryChargeObj.charge_type] = deliverCharge
+            amountHolder["DELIVERY_CHARGE_BREAK_DOWN"] = chargeBreakDown;
+            
 
 
      //calculate tax

@@ -328,7 +328,8 @@ exports.CHECK_OUT_FROM_CART = asynHandler(async (req, res, next) => {
         qr_value: uuidv4(),
         user_id: body.User_ID,
         aggregate: body.aggeagate,
-        cart_ID: cart.cart_ID
+        cart_ID: cart.cart_ID,
+        expectedDeliveryDate: cart.bid.expectedDeliveryDate
     }));
 
 
