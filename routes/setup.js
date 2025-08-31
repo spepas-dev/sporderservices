@@ -63,6 +63,17 @@ const {
   GOPA_ACCEPTED_INVOICE,
   INVOICE_DETAILS,
   INVOICE__ITEM_DETAILS,
+  PENDING_USER_INVOICE,
+  INVOICE_HISTORY,
+  PENDING_SELLER_INVOICE,
+ SELLER_INVOICE_HISTORY,
+ SET_ITEMS_FOR_PICKUP,
+ PENDING_RIDER_ACCEPTANCE,
+ RIDER_ACCEPT_INVOICE,
+ PICK_UP_ITEMS,
+ RIDER_INVOICES_PINDING_PICKUP,
+ INVOICE__ITEM_DETAILS_QE,
+ RIDER_ITEM_TO_BE_SHIPPED
 } = require("../controllers/InvoiceController");
 
 //test routes link
@@ -179,4 +190,58 @@ router
   .route("/invoice/item-details/:item_id")
   .get(NoneUserCheck, VALIDATE_TOKEN, INVOICE__ITEM_DETAILS);
 
+
+  router
+  .route("/invoice/item-details-by-qr/:qr_value")
+  .get(NoneUserCheck, VALIDATE_TOKEN, INVOICE__ITEM_DETAILS_QE);
+  
+  router
+  .route("/invoice/pending-invoice/:user_id?")
+  .get(NoneUserCheck, VALIDATE_TOKEN, PENDING_USER_INVOICE);
+
+  router
+  .route("/invoice/history/:user_id?")
+  .get(NoneUserCheck, VALIDATE_TOKEN, INVOICE_HISTORY);
+
+
+  router
+  .route("/invoice/pending-seller-invoice/:seller_id")
+  .get(NoneUserCheck, VALIDATE_TOKEN, PENDING_SELLER_INVOICE);
+
+  router
+  .route("/invoice/seller-history/:seller_id?")
+  .get(NoneUserCheck, VALIDATE_TOKEN, SELLER_INVOICE_HISTORY);
+
+  router
+  .route("/invoice/set-item-for-pickup")
+  .post(NoneUserCheck, VALIDATE_TOKEN, SET_ITEMS_FOR_PICKUP);
+
+
+  router
+  .route("/invoice/pending-rider-acceptance")
+  .get(NoneUserCheck, VALIDATE_TOKEN, PENDING_RIDER_ACCEPTANCE);
+  
+
+  router
+  .route("/invoice/rider-accept-invoice")
+  .post(NoneUserCheck, VALIDATE_TOKEN, RIDER_ACCEPT_INVOICE);
+
+  router
+  .route("/invoice/deliver-items-to-rider")
+  .post(NoneUserCheck, VALIDATE_TOKEN, PICK_UP_ITEMS);
+
+  
+
+
+  router
+  .route("/invoice/rider-pending-pickup/:rider_user_id?")
+  .get(NoneUserCheck, VALIDATE_TOKEN, RIDER_INVOICES_PINDING_PICKUP);
+
+  
+  router
+  .route("/invoice/rider_items_to_ship/:rider_user_id?")
+  .get(NoneUserCheck, VALIDATE_TOKEN, RIDER_ITEM_TO_BE_SHIPPED);
+  
+  
 module.exports = router;
+
