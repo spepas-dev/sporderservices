@@ -786,6 +786,274 @@ const trackerItems = filteredItems.map(item => ({
 
 
 
+
+
+
+
+exports.SET_ITEMS_FOR_SHIPMENT = asynHandler(async (req, res, next) => {
+
+  
+   
+    let {user, body} = req;
+
+    if(!body.user_id){
+        body.user_id = user.User_ID;
+    }
+
+
+
+    let itemIDs = body.items;
+
+     
+
+
+
+  var loginUrl = process.env.DB_BASE_URL +"invoice/item-list"; 
+ 
+  let newJob = await UtilityHelper.makeHttpRequest("POST",loginUrl,itemIDs);
+
+
+  if(!newJob)
+    {
+        var resp = {
+            status : RESPONSE_CODES.FAILED,
+            message : "Failed to connect to database services"
+        };
+        return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+    }
+
+    if(newJob.status != RESPONSE_CODES.SUCCESS){
+        return UtilityHelper.sendResponse(res, 200, newJob.message, newJob);
+     }
+
+    
+   let invoice_items = newJob.data;
+
+   const filteredItems = invoice_items.filter(item => item.status == INVOICE_STATUS.READY_TO_BE_SHIPPED);
+ 
+   const updatedItems = filteredItems.map(item => ({
+    ...item,
+    status: INVOICE_STATUS.SHIPPED,
+    statusMessage: "SHIPPED"
+}));
+
+
+const trackerItems = filteredItems.map(item => ({
+    item_id: item.item_id,
+    action: "SHIPPED",
+    description: "Item has been shipped",
+    user_id:  body.user_id
+}));
+
+
+
+
+
+  var cartUrl = process.env.DB_BASE_URL +"invoice/bulk-update-item"; 
+
+  let cartResponse = await UtilityHelper.makeHttpRequest("POST",cartUrl,  updatedItems);
+  
+  
+  
+  if(!cartResponse)
+      {
+          var resp = {
+              status : RESPONSE_CODES.FAILED,
+              message : "Failed to connect to database services"
+          };
+          return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+      }
+  
+  
+  if(cartResponse.status != RESPONSE_CODES.SUCCESS){
+  return UtilityHelper.sendResponse(res, 200, cartResponse.message, cartResponse);
+  }
+  
+  
+
+
+  var cartUrl = process.env.DB_BASE_URL +"invoice/add-invoice-tracker"; 
+
+  let tracker_response = await UtilityHelper.makeHttpRequest("POST",cartUrl,  trackerItems);
+  
+
+
+
+   var resp = {
+    status : RESPONSE_CODES.SUCCESS,
+    message : "Successful",
+    data: cartResponse.data
+};
+
+
+   return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+
+})
+
+
+
+
+
+
+
+
+exports.DELIVER_ITEM_TO_BUYER = asynHandler(async (req, res, next) => {
+
+  
+   
+    let {user, body} = req;
+
+    if(!body.user_id){
+        body.user_id = user.User_ID;
+    }
+
+
+
+    let itemIDs = body.items;
+
+     
+
+
+
+  var loginUrl = process.env.DB_BASE_URL +"invoice/item-list"; 
+ 
+  let newJob = await UtilityHelper.makeHttpRequest("POST",loginUrl,itemIDs);
+
+
+  if(!newJob)
+    {
+        var resp = {
+            status : RESPONSE_CODES.FAILED,
+            message : "Failed to connect to database services"
+        };
+        return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+    }
+
+    if(newJob.status != RESPONSE_CODES.SUCCESS){
+        return UtilityHelper.sendResponse(res, 200, newJob.message, newJob);
+     }
+
+    
+   let invoice_items = newJob.data;
+
+   const filteredItems = invoice_items.filter(item => item.status == INVOICE_STATUS.SHIPPED);
+ 
+   const updatedItems = filteredItems.map(item => ({
+    ...item,
+    status: INVOICE_STATUS.DELIVERED,
+    statusMessage: "DELIVERED"
+}));
+
+
+const trackerItems = filteredItems.map(item => ({
+    item_id: item.item_id,
+    action: "DELIVERED",
+    description: "Item delivered to buyer",
+    user_id:  body.user_id
+}));
+
+
+
+
+
+  var cartUrl = process.env.DB_BASE_URL +"invoice/bulk-update-item"; 
+
+  let cartResponse = await UtilityHelper.makeHttpRequest("POST",cartUrl,  updatedItems);
+  
+  
+  
+  if(!cartResponse)
+      {
+          var resp = {
+              status : RESPONSE_CODES.FAILED,
+              message : "Failed to connect to database services"
+          };
+          return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+      }
+  
+  
+  if(cartResponse.status != RESPONSE_CODES.SUCCESS){
+  return UtilityHelper.sendResponse(res, 200, cartResponse.message, cartResponse);
+  }
+  
+  
+
+
+  var cartUrl = process.env.DB_BASE_URL +"invoice/add-invoice-tracker"; 
+
+/*
+Update the main invoice status
+updatedItems
+  */
+
+  let tracker_response = await UtilityHelper.makeHttpRequest("POST",cartUrl,  trackerItems);
+  
+
+
+
+  const uniqueInvoiceIds = [...new Set(updatedItems.map(item => item.invoice_id))];
+
+
+
+
+
+
+
+
+  var invoice_list_url = process.env.DB_BASE_URL +"invoice/invoice-list-for-completion"; 
+ 
+  let invoice_listResponse = await UtilityHelper.makeHttpRequest("POST",invoice_list_url,uniqueInvoiceIds);
+
+
+  if(!invoice_listResponse)
+    {
+        var resp = {
+            status : RESPONSE_CODES.FAILED,
+            message : "Failed to connect to database services"
+        };
+        return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+    }
+
+
+    if(invoice_listResponse.status == RESPONSE_CODES.SUCCESS){
+       
+        let invoice_list = invoice_listResponse.data;
+
+        var invUpdateUrl = process.env.DB_BASE_URL +"invoice/bulk-update-invoice"; 
+
+        let invoice_update = await UtilityHelper.makeHttpRequest("POST",invUpdateUrl,  invoice_list);
+
+        
+     }
+
+
+
+    //invoice_listResponse
+
+
+
+
+
+
+   var resp = {
+    status : RESPONSE_CODES.SUCCESS,
+    message : "Successful",
+    data: cartResponse.data
+};
+
+
+   return UtilityHelper.sendResponse(res, 200, resp.message, resp);
+
+})
+
+
+
+
+
+
+
+
+
 exports.RIDER_ACCEPT_INVOICE = asynHandler(async (req, res, next) => {
 
   

@@ -68,12 +68,14 @@ const {
   PENDING_SELLER_INVOICE,
  SELLER_INVOICE_HISTORY,
  SET_ITEMS_FOR_PICKUP,
+ SET_ITEMS_FOR_SHIPMENT,
  PENDING_RIDER_ACCEPTANCE,
  RIDER_ACCEPT_INVOICE,
  PICK_UP_ITEMS,
  RIDER_INVOICES_PINDING_PICKUP,
  INVOICE__ITEM_DETAILS_QE,
- RIDER_ITEM_TO_BE_SHIPPED
+ RIDER_ITEM_TO_BE_SHIPPED,
+ DELIVER_ITEM_TO_BUYER
 } = require("../controllers/InvoiceController");
 
 //test routes link
@@ -217,6 +219,16 @@ router
   .post(NoneUserCheck, VALIDATE_TOKEN, SET_ITEMS_FOR_PICKUP);
 
 
+  router
+  .route("/invoice/set-item-for-shippment")
+  .post(NoneUserCheck, VALIDATE_TOKEN, SET_ITEMS_FOR_SHIPMENT);
+
+
+  router
+  .route("/invoice/deliver_items_to_buyer")
+  .post(NoneUserCheck, VALIDATE_TOKEN, DELIVER_ITEM_TO_BUYER);
+  
+  
   router
   .route("/invoice/pending-rider-acceptance")
   .get(NoneUserCheck, VALIDATE_TOKEN, PENDING_RIDER_ACCEPTANCE);
